@@ -203,12 +203,7 @@ namespace NLog
         {
             globalFactory.ReconfigExistingLoggers();
         }
-        
-        /// <summary>
-        /// The type of exceptions which will be rethrown.
-        /// </summary>
-        public static IEnumerable<Type> RethrowExceptionsOfType { get; set; }
-
+       
         /// <summary>
         /// The type of exceptions which will be rethrown.
         /// </summary>
