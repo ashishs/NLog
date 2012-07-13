@@ -209,6 +209,11 @@ namespace NLog
         /// </summary>
         public static IEnumerable<Type> RethrowExceptionsOfType { get; set; }
 
+        /// <summary>
+        /// The type of exceptions which will be rethrown.
+        /// </summary>
+        public static IEnumerable<Type> RethrowExceptionsOfType { get; set; }
+
 #if !SILVERLIGHT
 /// <summary>
 /// Flush any pending log messages (in case of asynchronous targets).
