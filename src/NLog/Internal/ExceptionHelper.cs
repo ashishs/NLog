@@ -62,6 +62,15 @@ namespace NLog.Internal
             {
                 return true;
             }
+            
+            if (exception != null && LogManager.RethrowExceptionsOfType != null)
+            {
+                foreach (var exceptionType in LogManager.RethrowExceptionsOfType)
+                {
+                    if (exception.GetType() == exceptionType)
+                        return true;
+                }
+            }
 
             return false;
         }

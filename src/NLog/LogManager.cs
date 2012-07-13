@@ -31,6 +31,8 @@
 // THE POSSIBILITY OF SUCH DAMAGE.
 // 
 
+using System.Collections.Generic;
+
 namespace NLog
 {
     using System;
@@ -201,6 +203,11 @@ namespace NLog
         {
             globalFactory.ReconfigExistingLoggers();
         }
+        
+        /// <summary>
+        /// The type of exceptions which will be rethrown.
+        /// </summary>
+        public static IEnumerable<Type> RethrowExceptionsOfType { get; set; }
 
 #if !SILVERLIGHT
 /// <summary>
